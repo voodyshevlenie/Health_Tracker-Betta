@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепты</title>
+    <link rel="stylesheet" href="/recipe.css">
+</head>
+<body>
+    <h1>Поиск рецептов</h1>
+    <form id="searchForm">
+        <input type="text" id="queryInput" placeholder="Введите запрос...">
+        <button type="submit">Найти</button>
+    </form>
+    
+    <div id="results"></div>
+
+    <!-- Подключаем библиотеку Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script src="/recipe.js"></script>
+</body>
+</html>
