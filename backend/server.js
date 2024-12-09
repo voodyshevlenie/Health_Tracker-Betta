@@ -13,6 +13,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
+// Маршрут для страницы рецептов
+app.get('/recipes.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'recipe.html'));
+});
 
 dotenv.config();
 
