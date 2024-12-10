@@ -1,27 +1,105 @@
+/* Основные стили */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Светлый фон */
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Стиль формы поиска */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#searchForm input[type="text"] {
+    width: 300px;
+    padding: 12px 20px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#searchForm button {
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+#searchForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Стилизация блока с результатами */
 #results {
     margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
+/* Карточки рецептов */
 .recipe {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .recipe-title {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    color: #444;
 }
 
 .recipe-details {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    margin-top: 10px;
     display: none;
 }
 
 .show-details .recipe-details {
     display: block;
+}
+
+/* Кнопка "Подробнее" */
+.recipe button {
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.recipe button:hover {
+    background-color: #0056b3;
 }
