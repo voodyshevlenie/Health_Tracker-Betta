@@ -103,3 +103,8 @@ h1 {
 .recipe button:hover {
     background-color: #0056b3;
 }
+.recipe img {
+    width: 100%;
+    height: auto; /* Сохраняет пропорции */
+    object-fit: cover; /* Изображения будут обрезаны до нужного размера */
+}
