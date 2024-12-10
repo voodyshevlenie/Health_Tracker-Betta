@@ -1,0 +1,170 @@
+/* Общие стили для body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 2px solid #333;
+    width: 400px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.24), 0 16px 38px rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Кнопка закрытия */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 0.75;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+/* Поле ввода названия */
+.name {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Выбор времени */
+.time-select {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Радиокнопки повторения */
+.radio-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Дни недели */
+.days-of-week label {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* Кнопка установки будильника */
+#setAlarm {
+    background-color: aqua;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.25s ease-in-out;
+}
+
+#setAlarm:hover {
+    background-color: #47a1e7;
+}
+
+/* Список будильников */
+#alarmList {
+    margin-top: 40px;
+    max-height: 500px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-direction: row; /* Выстраиваем элементы по горизонтали */
+}
+
+.alarm-item {
+    padding: 10px;
+    border: 1px solid #000000;
+    background-color: rgb(126, 197, 255);
+    margin-bottom: 5px;
+    font-size: 20px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px; /* Фиксированная ширина */
+    flex-shrink: 0; /* Запрет сжимания */
+}
+
+.delete {
+    background-color: crimson;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.delete:hover {
+    background-color: darkred;
+}
+
+/* Кнопка создания нового будильника */
+.knopka {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.create {
+    width: 70px;
+    height: 70px;
+    background-color: aqua;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    font-size: 32px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.25s ease-in-out;
+}
+
+.create:hover {
+    transform: scale(1.05);
+}
