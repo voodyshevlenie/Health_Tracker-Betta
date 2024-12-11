@@ -26,11 +26,11 @@ $(document).ready(function () {
             data: JSON.stringify(formData),
             contentType: 'application/json',
             success: function (response) {
-                alert('Пользователь успешно зарегистрирован! Ваш токен: ' + response.token);
+                alert('Успех!');
                 location.replace('index.html'); // Перенаправление на главную страницу
             },
             error: function (xhr, status, error) {
-                console.error("Ошибка регистрации:", xhr.status, xhr.responseText);
+                console.error("Ошибка регистрации. Попробуйте еще раз!", xhr.status, xhr.responseText);
                 alert('Ошибка регистрации: ' + xhr.responseText);
             }
         });
@@ -50,10 +50,10 @@ $(document).ready(function () {
             data: JSON.stringify(loginData),
             contentType: 'application/json',
             success: function (response) {
-                alert('Вы вошли в систему! Ваш токен: ' + response.token);
+                location.replace('index.html');
             },
             error: function (xhr, status, error) {
-                console.error("Ошибка входа:", xhr.status, xhr.responseText);
+                console.error("Ошибка входа. Попробуйте еще раз!", xhr.status, xhr.responseText);
                 alert('Ошибка входа: ' + xhr.responseText);
             }
         });
