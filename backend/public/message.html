@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Напоминания</title>
+    <link rel="stylesheet" href="message.css">
+</head>
+
+<body>
+
+    <div class="knopka">
+        <button class="create" id="to-create">+</button>
+    </div>
+
+    <div id="alarmList"></div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <input class="name" id='nazvanie' type="text" name="Название" placeholder="Название">
+            <input type="time" id="time" required><br><br>
+
+            <label>
+                <input type="radio" name="repeat" value="once" checked>
+                Один раз
+            </label><br>
+            <label>
+                <input type="radio" name="repeat" value="weekly">
+                Повтор
+            </label><br>
+
+            <div id="daysOfWeek" style="display:none;">
+                <label>
+                    <input type="checkbox" value="Пн"> Пн
+                </label>
+                <label>
+                    <input type="checkbox" value="Вт"> Вт
+                </label>
+                <label>
+                    <input type="checkbox" value="Ср"> Ср
+                </label>
+                <label>
+                    <input type="checkbox" value="Чт"> Чт
+                </label>
+                <label>
+                    <input type="checkbox" value="Пт"> Пт
+                </label>
+                <label>
+                    <input type="checkbox" value="Сб"> Сб
+                </label>
+                <label>
+                    <input type="checkbox" value="Вс"> Вс
+                </label>
+            </div>
+
+            <button id="setAlarm">Установить</button>
+        </div>
+    </div>
+
+    <script src="message.js"></script>
+</body>
+
+</html>
