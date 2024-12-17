@@ -1,0 +1,73 @@
+input{
+    font-size: 30px;
+    background: rgb(200, 255, 255);
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    width: 400px;
+}
+
+.форма{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.profile{
+    text-align: center;
+    line-height: 0px;
+    margin-bottom: 50px;
+}
+
+.profile2{
+    text-align: center;
+    line-height: 0px;
+    margin-bottom: 50px;
+}
+
+.stolb{
+    position: relative;
+    float: right;
+    
+}
+
+.общий{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.кнопка{
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+
+.save{
+    cursor: pointer;
+}
+
+.кнопка :active{
+    transform: scale(0.98);
+}
+
+button{
+    width: 400px;
+    height: 50px;
+    background-color: aqua;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+select{
+    position: absolute;
+    bottom: 50px;
+    width: 400px;
+    height: 40px;
+    background-color: rgb(200, 255, 255);
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+}
