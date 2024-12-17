@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Поиск и подключение устройств</title>
+  <link rel="stylesheet" href="add-device.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Поиск и подключение устройств</h1>
+    <button id="scanButton">Начать поиск устройств</button>
+    <ul id="deviceList"></ul>
+    
+    <!-- Элемент для анимации загрузки -->
+    <div id="loadingSpinner" style="display: none;">
+      <img src="assets/loading.gif" alt="Идет загрузка..."/>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+  <script src="add-device.js"></script>
+</body>
+</html>
