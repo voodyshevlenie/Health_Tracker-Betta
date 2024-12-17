@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const { addDevice, getDevices, getDeviceByMacAddress, updateDeviceData } = require('../controllers/deviceController');
 
-const deviceController = require('../controllers/deviceController');
-
-router.get('/:id', deviceController.getDeviceDataByUserId);
-
-router.post('/', deviceController.createDeviceData);
+router.post('/', addDevice);
+router.get('/', getDevices);
+router.get('/:macAddress', getDeviceByMacAddress);
+router.put('/:macAddress/data', updateDeviceData);
 
 module.exports = router;

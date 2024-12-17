@@ -1,29 +1,33 @@
 const mongoose = require('mongoose');
 
 const deviceSchema = new mongoose.Schema({
-    userId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
-    },
-    deviceType: {
-        type: String,
-        enum: ['fitbit', 'apple', 'xiaomi'],
-        required: true
-    },
-    steps: {
-        type: Number
-    },
-    heartRate: {
-        type: Number
-    },
-    sleepDuration: {
-        type: Number
-    },
-    date: {
+  name: {
+    type: String,
+    required: true,
+  },
+  type: {
+    type: String,
+    required: true,
+  },
+  macAddress: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  lastSyncTime: {
+    type: Date,
+  },
+  data: [
+    {
+      timestamp: {
         type: Date,
-        default: Date.now
-    }
+        default: Date.now,
+      },
+      steps: Number,
+      heartRate: Number,
+      caloriesBurned: Number,
+    },
+  ],
 });
 
 module.exports = mongoose.model('Device', deviceSchema);
