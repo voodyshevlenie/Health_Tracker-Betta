@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Активность</title>
+    <link rel="stylesheet" href="activity.css">
+</head>
+<body>
+    <a id="head" href="index.html">Health Tracker</a>
+    <div class="container">
+        <p class="Head">Добавляйте упражнения, которые вы сделали за день</p>
+        <div>
+            <label for="datePicker">Дата:</label>
+            <input type="date" id="datePicker" required>
+        </div>
+        
+        <button id="createButton" disabled>Создать</button>
+    </div>
+
+    <!-- Контейнеры для холстов будут добавляться динамически -->
+    <div id="canvasesContainer"></div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <form id="exerciseForm">
+                <input type="text" id="exerciseName" placeholder="Название" required><br>
+                <input type="number" id="reps" min="1" placeholder="Количество"><br>
+                <button type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="activity.js"></script>
+</body>
+</html>

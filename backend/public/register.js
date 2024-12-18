@@ -31,7 +31,7 @@ $(document).ready(function () {
             },
             error: function (xhr, status, error) {
                 console.error("Ошибка регистрации. Попробуйте еще раз!", xhr.status, xhr.responseText);
-                alert('Ошибка регистрации: ' + xhr.responseText);
+                alert('Ошибка регистрации! Попробуйте еще раз.');
             }
         });
     });
@@ -53,8 +53,8 @@ $(document).ready(function () {
                 location.replace('index.html');
             },
             error: function (xhr, status, error) {
-                console.error("Ошибка входа. Попробуйте еще раз!", xhr.status, xhr.responseText);
-                alert('Ошибка входа: ' + xhr.responseText);
+                console.error("Ошибка входа. Попробуйте еще раз!");
+                alert('Неправильный логин или пароль!');
             }
         });
     });

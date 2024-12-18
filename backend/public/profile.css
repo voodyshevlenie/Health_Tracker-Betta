@@ -1,10 +1,14 @@
+body{
+    background-color: rgb(78, 225, 255);
+}
+
 input{
     font-size: 30px;
     background: rgb(200, 255, 255);
-    border: 2px solid black;
     border-radius: 10px;
     margin-bottom: 50px;
     width: 400px;
+    border: 2px solid #1e00ff;
 }
 
 .форма{
@@ -16,12 +20,14 @@ input{
     text-align: center;
     line-height: 0px;
     margin-bottom: 50px;
+    color: rgb(0, 51, 255);
 }
 
 .profile2{
     text-align: center;
     line-height: 0px;
     margin-bottom: 50px;
+    color: rgb(0, 51, 255);
 }
 
 .stolb{
@@ -57,8 +63,10 @@ button{
     width: 400px;
     height: 50px;
     background-color: aqua;
-    border: 2px solid black;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
     border-radius: 10px;
+    border: 2px solid #1e00ff;
 }
 
 select{
@@ -67,7 +75,17 @@ select{
     width: 400px;
     height: 40px;
     background-color: rgb(200, 255, 255);
-    border: 2px solid black;
+    color: gray;
+    border: 2px solid #1e00ff;
     border-radius: 10px;
     font-size: 20px;
+}
+
+#head{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    margin-top: -15px;
+    margin-left: 10px;
+    text-decoration: none;
 }
