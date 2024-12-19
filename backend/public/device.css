@@ -1,4 +1,3 @@
-/* device.css */
 
 body {
     display: flex;
@@ -7,17 +6,22 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: rgb(78, 225, 255);
 }
 
 .container {
     text-align: center;
+    background-color: white;
+    height: 180px;
+    width: 1090px;
+    border-radius: 20px;
 }
 
 p {
-    margin-top: 0;
+    margin-top: 15;
     margin-bottom: 30px;
     font-size: 30px;
-    color: green;
+    color: black;
 }
 
 button {
@@ -34,4 +38,13 @@ button {
 
 .bot:active {
     transform: scale(0.98);
+}
+
+#head{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    top: 5px;
+    left: 10px;
+    text-decoration: none;
 }

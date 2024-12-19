@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     label: 'Индекс Массы Тела (ИМТ)',
                     data: bmis,
                     fill: false,
-                    borderColor: '#007BFF'
+                    borderColor: 'rgb(0, 0, 0) '
                 }]
             },
             options: {

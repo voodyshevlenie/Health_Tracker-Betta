@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 20px auto;
     text-align: center;
+    background-color: rgb(78, 225, 255);
 }
 
 #bmi-form input {
@@ -22,7 +23,7 @@ body {
 }
 
 #bmi-form button:hover {
-    background-color: #45a049; /* Изменение цвета при наведении курсора */
+    background-color:rgb(39, 164, 41); /* Изменение цвета при наведении курсора */
 }
 
 #results {
@@ -34,6 +35,8 @@ body {
 #chart {
     display: block;
     margin: 40px auto;
+    background-color: white;
+    color: black;
 }
 
 #head{
