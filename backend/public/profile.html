@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -6,10 +7,12 @@
     <title>Ваш профиль</title>
     <link rel="stylesheet" type="text/css" href="profile.css">
 </head>
+<body>
+    <a id="head" href="index.html">Health Tracker</a>
     <form class="форма" name="signup" action="User.js" method="post">
 
         <div class="profile2">
-        <h1>ПРОФИЛЬ</h1>
+            <h1>ПРОФИЛЬ</h1>
         </div>
         <div class="name">
             <input type="text" name="name" placeholder="Имя">
@@ -19,30 +22,30 @@
         </div>
         <div class="Строки">
             <div class="profile">
-            <h1>Ваши данные:</h1>
+                <h1>Ваши данные:</h1>
             </div>
             <div class="общий">
                 <div>
                     <div>
-                        <input type="gmail" name="gmail" placeholder="Gmail">
+                        <input type="email" name="gmail" placeholder="Gmail">
                     </div>
                     <div>
-                        <input type="text" name="рост" placeholder="Рост">
+                        <input type="number" name="рост" placeholder="Рост">
                     </div>
                     <div>
-                        <input type="text" name="вес" placeholder="Вес">
+                        <input type="number" name="вес" placeholder="Вес">
                     </div>
                 </div>
 
-                <div class="stolb">
+                <div class="столб">
                     <div>
                         <input type="text" name="страна" placeholder="Страна">
                     </div>
                     <div>
-                        <input type="text" name="возраст" placeholder="Возраст">
+                        <input type="number" name="возраст" placeholder="Возраст">
                     </div>
                     <div>
-                        <select>
+                        <select name="пол">
                             <option value="1">Мужской</option>
                             <option value="2">Женский</option>
                         </select>
@@ -50,11 +53,12 @@
                 </div>
             </div>
             <div class="кнопка">
-            <button class="save">Сохранить</button>
+                <button class="save">Сохранить</button>
             </div>
         </div>
     </form>
 
+    <script src="profile.js"></script>
 </body>
 
 </html>

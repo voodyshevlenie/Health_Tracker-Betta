@@ -1,59 +1,96 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, rgb(78, 225, 255) 50%, rgb(179, 255, 251) 50%);
+    background-size: 100% 100%;
+    min-height: 100vh;
 }
 
-.header{
-    height: 200px;
-    width: auto;
-    background-color: #0084ff;
+/* Основные стили для header */
+.header {
+    position: relative;
+    height: 90vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+
 }
 
-.text-header{
-    margin: 0;
-    font-size: 100px;
+/* Стили для заголовка "Health Tracker" */
+.text-header {
+    font-size: 90px;
+    margin-bottom:0; /* Опционально, если хотите оставить немного пространства перед приветствием */
+    margin-left: 20px;
     color: rgb(255, 255, 255);
+    font-weight: 900;
 }
 
-.hello{
-    text-align: center;
-    font-size: 20px;
-    margin-top: 80px;
+/* Стили для приветствия */
+.hello {
+    font-size: 24px;
+    margin-left: 130px;
+    color: rgb(0, 0, 0);
 }
 
-.buttons {
+/* Правая боковая панель */
+.right-sidebar {
+    position: absolute;
+    top: 330px;
+    right: 280px; /* Отступ от правого края экрана */
+    transform: translateY(-50%); /* Центрирование по вертикали */
     display: flex;
-    justify-content: center;
-    gap: 40px; /* Расстояние между кнопками */
-    margin-top: 80px;
-}
-
-.buttons a {
-    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 500px;
     width: 200px;
-    height: 200px;
-    line-height: 200px; /* Центрируем текст вертикально */
-    text-align: center;
-    background-color: #48e4ff;
-    border: 0;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
+}
+
+.right-sidebar-content > a {
     text-decoration: none;
+    display: inline-block; /* Можно также использовать block */
+    margin: 30px 0; /* Только вертикальные отступы между кнопками */
+    padding: 15px 30px;
+    overflow: hidden;
+    border: 2px solid;
+    border-bottom-width: 4px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(30, 71, 255);
+    background: rgb(133, 245, 255);
+    transition: color .3s, background .5s;
+    line-height: 50px;
+    text-align: center;
+    width: 400px;
+    height: 80px;
+    font-size: 30px;
 }
 
-.buttons a:active {
-  transform: scale(0.98);
+.right-sidebar-content > a:hover {
+    animation: stripes .75s infinite linear;
+    background: linear-gradient(45deg, rgb(236, 30, 255) 25%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 50%, rgb(236, 30, 255) 50%, rgb(236, 30, 255) 75%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 0));
+    background-size: 10px 10px;
+    color: #ff0000;
 }
 
-.button-container a:active {
-  transform: scale(0.98);
+@keyframes stripes {
+    0% { background-position: 0 0; }
+    100% { background-position: 50px 0; }
 }
 
+/* Кнопка меню */
 .menu-button {
     position: fixed;
     top: 10px;
@@ -63,18 +100,20 @@ body {
     font-size: 30px;
     cursor: pointer;
     z-index: 1000;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
+/* Левая боковая панель (Sidebar) */
 .sidebar {
     position: fixed;
     top: 0;
     left: -300px;
     width: 300px;
     height: 100%;
-    background-color: #FFF;
+    background-color: #7affff;
     z-index: 999;
     transition: left 0.3s ease-in-out;
+
 }
 
 .sidebar-content {
@@ -103,9 +142,9 @@ body {
     gap: 20px;
 }
 
-#profile{
+#profile {
     position: absolute;
-    width: 297px;
+    width: 300px;
     height: 50px;
     left: 0;
     margin-left: 0;
@@ -116,32 +155,32 @@ body {
     text-align: center;
     color: black;
     text-decoration: none;
-    border: 2px solid black; 
-
-
+    border: 2px solid black;
+    line-height: 50px;
 }
 
-#device{
+#device {
     position: absolute;
-    width: 297px;
+    width: 300px;
     height: 50px;
     left: 0;
     margin-left: 0;
-    margin-top:0px;
+    margin-top: -1px;
     background-color: #48e4ff;
     font-size: 25px;
     cursor: pointer;
     text-align: center;
     color: black;
     text-decoration: none;
-    border: 2px solid black; 
+    border: 2px solid black;
+    line-height: 50px;
 }
 
-.kfd{
+.kfd {
     position: absolute;
     width: 300px;
     height: 50px;
-    left: 35px;
+    left: 25px;
     margin-left: 0;
     margin-top: 650px;
     font-size: 25px;

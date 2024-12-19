@@ -6,19 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Функция для получения рецептов по запросу
     async function fetchRecipes(query) {
         try {
-            const response = await axios.get(
-                `https://api.spoonacular.com/recipes/search?query=${encodeURIComponent(
-                    query
-                )}&number=10&apiKey=9b52ba700f854408bd80787aefe15964`
-            );
-            // Преобразуем относительные пути изображений в полные URL
-            const recipesWithFullImageUrl = response.data.results.map((recipe) => ({
-                ...recipe,
-                image: `https://spoonacular.com/recipeImages/${recipe.image}`,
-            }));
-            return recipesWithFullImageUrl;
+            const response = await axios.get(`https://api.spoonacular.com/recipes/search?query=${encodeURIComponent(query)}&number=10&apiKey=9b52ba700f854408bd80787aefe15964`);
+            return response.data.results;
         } catch (error) {
-            console.error('Ошибка при получении рецептов:', error.message);
+            console.error("Ошибка при получении рецептов:", error.message);
             alert('Произошла ошибка при получении рецептов.');
         }
     }
@@ -26,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Обработчик формы поиска
     searchForm.addEventListener('submit', async function(event) {
         event.preventDefault();
-
+        
         const query = queryInput.value.trim();
         if (!query) return;
 
@@ -38,16 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (recipes && recipes.length > 0) {
             // Отображение рецептов
-            recipes.forEach((recipe) => {
+            recipes.forEach(recipe => {
                 const div = document.createElement('div');
                 div.className = 'recipe';
-
-                // Добавляем изображение рецепта
-                const image = document.createElement('img');
-                image.src = recipe.image;
-                image.alt = recipe.title;
-                div.appendChild(image);
-
+                
                 const title = document.createElement('p');
                 title.className = 'recipe-title';
                 title.textContent = recipe.title;
@@ -74,8 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 resultsDiv.appendChild(div);
             });
         } else {
-            console.log('Рецептов не найдено.');
-            alert('По вашему запросу ничего не найдено.');
+            console.log("Рецептов не найдено.");
+            alert("По вашему запросу ничего не найдено.");
         }
     });
 
@@ -93,16 +78,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (recipes && recipes.length > 0) {
             // Отображение рецептов
             resultsDiv.innerHTML = ''; // Очистка предыдущих результатов перед новым набором
-            recipes.forEach((recipe) => {
+            recipes.forEach(recipe => {
                 const div = document.createElement('div');
                 div.className = 'recipe';
-
-                // Добавляем изображение рецепта
-                const image = document.createElement('img');
-                image.src = recipe.image;
-                image.alt = recipe.title;
-                div.appendChild(image);
-
+                
                 const title = document.createElement('p');
                 title.className = 'recipe-title';
                 title.textContent = recipe.title;
@@ -129,27 +108,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 resultsDiv.appendChild(div);
             });
         } else {
-            console.log('Рецептов не найдено.');
-            alert('По вашему запросу ничего не найдено.');
+            console.log("Рецептов не найдено.");
+            alert("По вашему запросу ничего не найдено.");
         }
     });
 
     // Функция для получения инструкций рецепта
     async function getRecipeInstructions(id) {
         try {
-            const response = await axios.get(
-                `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=9b52ba700f854408bd80787aefe15964`
-            );
-            let instructions = response.data.instructions;
-
-            // Убираем теги и заменяем их на переносы строк
-            instructions = instructions.replace(/<\/?[^>]+>/gi, '');
-            instructions = instructions.split('\n').map(line => line.trim()).join('\n'); // Разбиваем на строки
-
-            return instructions;
+            const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=9b52ba700f854408bd80787aefe15964`);
+            return response.data.instructions;
         } catch (error) {
-            console.error('Ошибка при получении инструкции рецепта:', error.message);
+            console.error("Ошибка при получении инструкции рецепта:", error.message);
             alert('Произошла ошибка при получении инструкции рецепта.');
-        }
+        } 
     }
 });

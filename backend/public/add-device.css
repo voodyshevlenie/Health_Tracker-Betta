@@ -11,6 +11,7 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #f0f0f0;
+  background-color: rgb(78, 225, 255);
 }
 
 .container {
@@ -34,6 +35,7 @@ h1 {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-left: 92px;
 }
 
 #scanButton:hover {
@@ -83,4 +85,13 @@ h1 {
 #loadingSpinner img {
   width: 64px;
   height: auto;
+}
+
+#head{
+  position: absolute;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  top: 5px;
+  left: 10px;
+  text-decoration: none;
 }

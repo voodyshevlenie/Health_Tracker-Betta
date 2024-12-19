@@ -6,6 +6,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: rgb(78, 225, 255);
 }
 
 .container {
@@ -17,7 +18,7 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 30px;
-    color: #555;
+    color: #ffffff;
 }
 
 /* Стиль формы поиска */
@@ -32,14 +33,15 @@ h1 {
     padding: 12px 20px;
     margin-right: 10px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid #1e00ff;
     border-radius: 4px;
+    background-color: #aef4ff;
 }
 
 #searchForm button {
     padding: 12px 20px;
     background-color: #007BFF;
-    color: white;
+    color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -54,9 +56,8 @@ h1 {
 #results {
     margin-top: 20px;
     padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    height: 450px;
 }
 
 /* Карточки рецептов */
@@ -103,8 +104,12 @@ h1 {
 .recipe button:hover {
     background-color: #0056b3;
 }
-.recipe img {
-    width: 100%;
-    height: auto; /* Сохраняет пропорции */
-    object-fit: cover; /* Изображения будут обрезаны до нужного размера */
+
+#head{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    top: 5px;
+    left: 10px;
+    text-decoration: none;
 }

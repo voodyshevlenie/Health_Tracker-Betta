@@ -1,0 +1,197 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(78, 225, 255);
+}
+
+.container {
+    max-width: 500px;
+    height: 150px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgb(187, 244, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.Head {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    color: rgb(0, 0, 0);
+}
+
+/* Стиль для полей ввода */
+input[type="date"],
+input[type="text"] {
+    width: 460px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #2f00ff;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+input[type="date"]::before {
+    content: attr(placeholder) !important;
+    color: #999;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Стиль для кнопки */
+button {
+    margin-left: 200px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #86ceff;
+    cursor: not-allowed;
+}
+
+/* Стили для холста */
+.canvasContainer {
+    position: relative;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgb(187, 244, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.canvasContainer h2 {
+    font-size: 20px;
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
+
+.addExerciseButton {
+    padding: 10px 20px;
+    margin-left: -5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.removeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 7px 10px;
+    background-color: #ff0800;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.addExerciseButton:hover{
+    background-color: #3543d6;
+}
+.removeButton:hover {
+    background-color: #c31818;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрываем по умолчанию */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: rgb(187, 244, 255);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888888;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.close-button {
+    margin-top: -10px;
+    color: #ff0000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: rgb(200, 41, 41);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#exerciseForm input {
+    width: 250px;
+    margin-top: 30px;
+    margin-left: 120px;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #1e00ff;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#exerciseForm button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#exerciseForm button:hover {
+    background-color: #0056b3;
+}
+
+#head{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    top: 5px;
+    left: 10px;
+    text-decoration: none;
+}

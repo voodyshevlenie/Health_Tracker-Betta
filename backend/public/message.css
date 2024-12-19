@@ -1,11 +1,11 @@
 /* Общие стили для body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: rgb(78, 225, 255);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 /* Модальное окно */
@@ -22,7 +22,7 @@ body {
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: hsl(189, 100%, 74%);
     margin: 15% auto;
     padding: 20px;
     border: 2px solid #333;
@@ -36,7 +36,7 @@ body {
 
 /* Кнопка закрытия */
 .close {
-    color: #aaaaaa;
+    color: #0800ff;
     float: right;
     font-size: 36px;
     font-weight: bold;
@@ -92,7 +92,7 @@ body {
 
 /* Кнопка установки будильника */
 #setAlarm {
-    background-color: aqua;
+    background-color: rgb(0, 145, 255);
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -167,4 +167,13 @@ body {
 
 .create:hover {
     transform: scale(1.05);
+}
+
+#head{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    top: 5px;
+    left: 10px;
+    text-decoration: none;
 }
